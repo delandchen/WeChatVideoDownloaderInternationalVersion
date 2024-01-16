@@ -139,7 +139,7 @@ export async function startServer({ win, setProxyErrorCallback = f => f }) {
           .then(() => resolve())
           .catch(() => {
             setProxyErrorCallback(data);
-            reject('设置代理失败');
+            reject('Failed to set proxy');
           });
       })
       .on('error', err => {

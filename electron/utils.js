@@ -15,11 +15,11 @@ function checkUpdate(
     .then(({ data }) => {
       if (semver.gt(data?.version, app.getVersion())) {
         const result = dialog.showMessageBoxSync({
-          message: '发现新版本，是否更新？',
+          message: 'A new version was found. Do you want to update? (You will lost English translation)',
           type: 'question',
           cancelId: 1,
           defaultId: 0,
-          buttons: ['进入新版本下载页面', '取消'],
+          buttons: ['Open download page', 'Cancel'],
         });
 
         if (result === 0 && downloadUrl) {

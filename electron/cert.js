@@ -19,11 +19,11 @@ export async function installCert(checkInstalled = true) {
   if (process.platform === 'darwin') {
     return new Promise((resolve, reject) => {
       clipboard.writeText(
-        `echo "输入本地登录密码" && sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain "${CONFIG.CERT_PUBLIC_PATH}" &&  touch ${CONFIG.INSTALL_CERT_FLAG} && echo "安装完成"`,
+        `echo "Please enter you sudo password" && sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain "${CONFIG.CERT_PUBLIC_PATH}" &&  touch ${CONFIG.INSTALL_CERT_FLAG} && echo "The installation is complete"`,
       );
       dialog.showMessageBoxSync({
         type: 'info',
-        message: `命令已复制到剪贴板,粘贴命令到终端并运行以安装并信任证书`,
+        message: `The command has been copied to the clipboard, paste the command into the terminal and run to install and trust the certificate`,
       });
 
       reject();

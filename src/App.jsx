@@ -35,14 +35,23 @@ function App() {
             type="primary"
             ghost
           >
-            Star
+            Star Original
+          </Button>
+          <Button
+            className="App-inited-github"
+            icon={<GithubOutlined />}
+            onClick={() => shell.openExternal('https://github.com/DenKey/WeChatVideoDownloaderInternationalVersion')}
+            type="primary"
+            ghost
+          >
+            Star Translation
           </Button>
           <Table
             sticky
             dataSource={captureList}
             columns={[
               {
-                title: 'Video Title（Capturing...）',
+                title: 'Video Title',
                 dataIndex: 'description',
                 key: 'description',
                 render: value => value,

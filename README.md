@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E8TLH0X)
 # WeChat Video Downloader (English fork of [Chinese product](https://github.com/lecepin/WeChatVideoDownloader))
 
 NOTE: I am not author use on your own risk.

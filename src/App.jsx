@@ -40,7 +40,11 @@ function App() {
           <Button
             className="App-inited-github"
             icon={<GithubOutlined />}
-            onClick={() => shell.openExternal('https://github.com/DenKey/WeChatVideoDownloaderInternationalVersion')}
+            onClick={() =>
+              shell.openExternal(
+                'https://github.com/DenKey/WeChatVideoDownloaderInternationalVersion',
+              )
+            }
             type="primary"
             ghost
           >
@@ -127,7 +131,12 @@ function App() {
       ) : null}
       {state.matches('未初始化') ? (
         <div className="App-uninit">
-          <Alert message="First time entering, please initialize first" type="warning" showIcon closable={false} />
+          <Alert
+            message="First time entering, please initialize first"
+            type="warning"
+            showIcon
+            closable={false}
+          />
           <Button
             size="large"
             onClick={() => send('e_开始初始化')}
@@ -144,7 +153,12 @@ function App() {
       ) : null}
       {state.matches('开启服务失败') ? (
         <div className="App-uninit">
-          <Alert message="Failed to start the service, please check your certificate" type="error" showIcon closable={false} />
+          <Alert
+            message="Failed to start the service, please check your certificate"
+            type="error"
+            showIcon
+            closable={false}
+          />
           <Button size="large" onClick={() => send('e_重试')} type="primary">
             Try to enable
           </Button>

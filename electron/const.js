@@ -16,7 +16,7 @@ const HOME_PATH = path.join(os.homedir(), '.wechat-video-downloader');
 
 export default {
   APP_START_URL: isDev
-    ? 'http://localhost:3000'
+    ? 'http://127.0.0.1:3000'
     : url.format({
         pathname: path.join(APP_PATH, './build/index.html'),
         protocol: 'file:',
